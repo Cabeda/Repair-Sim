@@ -1,0 +1,48 @@
+﻿@model RepairSim.Models.ViewModel.ValoresEntradaViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+<form class="form-horizontal" asp-controller="Home" asp-action="Index" method="post">
+
+    <div class="row">
+    </div>
+    <div>
+        <div class="container-fluid">
+            <h1>Valores Globais da Simulacao</h1>
+            <p>Trata-se dos valores básicos da simulação</p>
+            <div class="row">
+
+                <div class="col-sm-2" style="background-color:#f0f0f5;">@Html.LabelFor(model => model.Duracao, new { })</div>
+                <div class="col-sm-2" style="background-color:#f0f0f5">@Html.LabelFor(model => model.TaxaReclamacao, new { })</div>
+                <div class="col-sm-2" style="background-color:#f0f0f5;">@Html.LabelFor(model => model.TaxaUrgencia, new { })</div>
+                <div class="col-sm-2" style="background-color:#f0f0f5;">@Html.LabelFor(model => model.AceitacaoOrcamentos, new { })</div>
+                <div class="col-sm-2" style="background-color:#f0f0f5;">@Html.LabelFor(model => model.NumEquipamentosSim, new { })</div>
+
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <input asp-for="Duracao" form="form-class" />
+                </div>
+                <div class="col-sm-2">
+                    <input asp-for="TaxaReclamacao" form="form-class" />
+                </div>
+                <div class="col-sm-2">
+                    <input asp-for="TaxaUrgencia" form="form-class" />
+                </div>
+                <div class="col-sm-2">
+                    <input asp-for="AceitacaoOrcamentos" form="form-class" />
+                </div>
+                <div class="col-sm-2">
+                    <input asp-for="NumEquipamentosSim" form="form-class" />
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary"><span class='glyphicon glyphicon-plus-sign'></span>&nbsp; Iniciar</button>
+    </div>
+    </form>
+
+

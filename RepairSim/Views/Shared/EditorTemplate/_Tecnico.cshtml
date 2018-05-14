@@ -1,0 +1,18 @@
+﻿@model RepairSim.Models.Entidades.Tecnico
+
+<div class="row" id="@Model.UniqueId">
+
+
+        <div class="col-md-11">
+            <div class="col-md-8 form-group">
+                <div>
+                    @Html.EditorFor(model => model.Experiencia, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nivel de Experiência" } })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button type="button" id="DeleteContributer" name="DeleteContributer" value="Delete" onclick="deleteContributerLine('@Model.UniqueId')" class="btn btn-default" title="remover"><span class='glyphicon glyphicon-minus-sign'></span></button>
+        </div>
+
+</div>
+<br />

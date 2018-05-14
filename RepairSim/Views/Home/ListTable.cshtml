@@ -1,0 +1,79 @@
+﻿@model  RepairSim.Models.BlocoPrincipal.ProgramaPrincipal
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/scripts/jquery-ui-1.10.2.min.js"></script>
+    <script src="~/scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h2>Lista de Eventos</h2>
+    <div class="container body-content">
+        <div class="table-responsive">
+            @{
+
+                if (Model.Sim.ListaEventos.Any())
+                {
+                    <table class="myGrid" id="table">
+                        <thead>
+                            <tr>
+                                <th class="text-nowrap">Codigo Equipamento </th>
+                                <th class="text-nowrap">Nome Evento </th>
+                                <th class="text-nowrap">Duracao </th>
+                                <th class="text-nowrap">Tempo Entrada </th>
+                                <th class="text-nowrap">Tempo Espera</th>
+
+                            </tr>
+                        </thead>
+                    
+                       
+                            <tbody>
+                                @foreach (var i in Model.Sim.ListaEventos)
+                             {
+
+                                <tr>
+                
+                                    <td class="text-nowrap">
+                                        @Html.DisplayFor(modelItem => i.Id)
+                                        <br />
+                                    </td>
+                                        <td class="text-nowrap">
+                                         @Html.DisplayFor(modelItem => i.NomeEvento)
+                                         <br />
+                                        </td>
+                                    <td class="text-nowrap">
+                                        @Html.DisplayFor(modelItem => i.Duracao)
+                                        <br />
+                                    </td>
+                                    <td class="text-nowrap">
+                                        @Html.DisplayFor(modelItem => i.TempoEntrada)
+                                        <br />
+                                    </td>
+                                    <td class="text-nowrap">
+                                        @Html.DisplayFor(modelItem => i.TempoEntradaEmFilaEspera)
+                                        <br />
+                                    </td>
+
+
+                                </tr>
+
+                                @*}*@
+                                }
+                            </tbody>
+                            
+                      
+                    </table>
+                }
+
+            }
+            </div>
+        </div>
+</body>
+

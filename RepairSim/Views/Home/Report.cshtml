@@ -1,0 +1,115 @@
+﻿@model  RepairSim.Models.BlocoPrincipal.ProgramaPrincipal
+
+<h1 style="margin-top:70px">Report</h1>
+
+<p>As medidas temporais são apresentadas em unidades de tempo</p>
+
+<h2>Dados Gerais da Simulação</h2>
+
+<div class="row">
+    @* Tempo Simulador *@
+    @Html.LabelFor(m => m.Sim.Contador.TempoAtual)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoAtual)
+</div>
+
+<div class="row">
+    @* Relogio de Sistema *@
+    @Html.LabelFor(m => m.Sim.Contador.TimeSpan) 
+    @Html.DisplayFor(model => model.Sim.Contador.TimeSpan.TotalSeconds) segundos
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.NumEquipamentos)
+    @Html.DisplayFor(model => model.Sim.Contador.NumEquipamentos)
+</div>
+
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TaxaOcupacao)
+    @Html.DisplayFor(model => model.Sim.Contador.TaxaOcupacao)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMediaEspera)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMediaEspera)
+</div>
+
+
+
+<h2>Tempos Médios de Evento</h2>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioReceberEquipamento)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioReceberEquipamento)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoReparacaoMedio)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoReparacaoMedio)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioTestes)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioTestes)
+</div>
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioArmazem)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioArmazem)
+</div>
+
+
+
+<h2>Tempos de Espera Médios</h2>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioFilaReceberEquipamento)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioFilaReceberEquipamento)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioFilaEsperarDiagnostico)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioFilaEsperarDiagnostico)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioFilaAguardaColaboradorArmazem)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioFilaAguardaColaboradorArmazem)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioFilaAguardaTecnico)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioFilaAguardaTecnico)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioFilaAguardaTestes)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioFilaAguardaTestes)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TempoMedioFilaAguardaEmbalar)
+    @Html.DisplayFor(model => model.Sim.Contador.TempoMedioFilaAguardaEmbalar)
+</div>
+
+<h2>Taxas de Ocupação</h2>
+
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TaxaOcupacaoColaboradorLogistica)
+    @Html.DisplayFor(model => model.Sim.Contador.TaxaOcupacaoColaboradorLogistica)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TaxaOcupacaoColaboradorArmazem)
+    @Html.DisplayFor(model => model.Sim.Contador.TaxaOcupacaoColaboradorArmazem)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TaxaOcupacaoTecnico)
+    @Html.DisplayFor(model => model.Sim.Contador.TaxaOcupacaoTecnico)
+</div>
+
+<div class="row">
+    @Html.LabelFor(m => m.Sim.Contador.TaxaOcupacaoTester)
+    @Html.DisplayFor(model => model.Sim.Contador.TaxaOcupacaoTester)
+</div>
